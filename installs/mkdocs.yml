@@ -1,0 +1,65 @@
+site_name: Install CLI Tools
+site_url: https://bala-kubelancer.github.io/Install-cli-tools/
+site_description: One-stop documentation to install and manage Cloud & DevOps CLI tools.
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+nav:
+  - Home: index.md
+
+  - Kubernetes tools:
+      - "kubectl": tools/kubernetes/kubectl.md
+      - "kubectx & kubens": tools/kubernetes/kubectx-kubens.md
+      - "k9s": tools/kubernetes/k9s.md
+
+  - Cloud tools:
+      - "AWS CLI": tools/cloud/aws-cli.md
+      - "eksctl": tools/cloud/eksctl.md
+
+  - DevOps tools:
+      - "Helm": tools/devops/helm.md
+      - "Terraform": tools/devops/terraform.md
+
+  - Utilities:
+      - "jq": tools/utilities/jq.md
+      - "yq": tools/utilities/yq.md
+
+  - Guides:
+      - "Install on macOS": guides/install-on-macos.md
+      - "Install on Ubuntu": guides/install-on-ubuntu.md
+
+  - About:
+      - "About this project": about.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+
+plugins:
+  - search
