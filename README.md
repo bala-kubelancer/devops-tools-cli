@@ -1,2 +1,1 @@
-# Install-cli-tools
-Install CLI tools 
+<p align="left"> <a href="https://bala-kubelancer.github.io/Install-cli-tools/"><b>🌐 Visit Documentation Website</b></a> • <a href="#-features">Features</a> • <a href="#️-supported-cli-tools">Supported Tools</a> • <a href="#-installation-guides">Platform Installation</a> • <a href="#-contributing">Contributing</a> </p>
