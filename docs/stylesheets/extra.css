@@ -1,0 +1,95 @@
+/* ===== Sidebar section headings styling (bold, dark blue) ===== */
+.md-sidebar .md-nav__title {
+  color: #0b3d91 !important;      /* dark blue */
+  font-weight: 800 !important;    /* bold */
+  cursor: pointer;                /* shows clickable */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Child links normal dark gray */
+.md-nav__link {
+  color: #333333 !important;
+  font-weight: 500 !important;
+}
+
+/* Toggle caret (inserted by JS) */
+.md-nav__title .nav-toggle {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  transition: transform 180ms ease;
+  flex-shrink: 0;
+}
+
+/* caret graphic using border */
+.md-nav__title .nav-toggle::before {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 0.18em 0.18em 0 0;
+  width: 0.55em;
+  height: 0.55em;
+  transform: rotate(45deg);
+  margin-left: 0px;
+  margin-top: 0.08em;
+  color: inherit;
+  border-color: currentColor;
+}
+
+/* rotated when collapsed (points right) */
+.md-nav__title[aria-expanded="false"] .nav-toggle {
+  transform: rotate(-45deg);
+}
+
+/* rotated when expanded (points down) */
+.md-nav__title[aria-expanded="true"] .nav-toggle {
+  transform: rotate(45deg);
+}
+
+/* Smooth collapse/expand animation for lists */
+.md-sidebar .md-nav__list {
+  transition: max-height 240ms ease, opacity 240ms ease;
+  overflow: hidden;
+}
+
+/* When hidden we set opacity low (JS will control max-height) */
+.md-sidebar .md-nav__list[hidden] {
+  opacity: 0;
+  max-height: 0 !important;
+  pointer-events: none;
+}
+
+/* When visible */
+.md-sidebar .md-nav__list[aria-hidden="false"] {
+  opacity: 1;
+  max-height: 2000px; /* large enough to show contents */
+}
+
+/* Accessibility focus style */
+.md-nav__title:focus {
+  outline: 3px solid rgba(11, 61, 145, 0.15);
+  outline-offset: 2px;
+}
+
+/* Make sidebar SECTION HEADINGS bold + dark blue */
+
+/* For Material versions that use <span class="md-nav__title"> */
+.md-sidebar .md-nav__title {
+  color: #0b3d91 !important;
+  font-weight: 800 !important;
+}
+
+/* For versions that use <label class="md-nav__link md-nav__link--section"> */
+.md-sidebar .md-nav__item--section > .md-nav__link {
+  color: #0b3d91 !important;
+  font-weight: 800 !important;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .md-sidebar .md-nav__title { color: #9fbdf0 !important; }
+  .md-nav__link { color: #d0d0d0 !important; }
+}
