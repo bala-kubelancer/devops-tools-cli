@@ -83,6 +83,7 @@ nav:
   - AWS Cloud tools:
       - "AWS CLI": tools/awscloud/aws-cli.md
       - "eksctl": tools/awscloud/eksctl.md
+      - "eks-node-viewer": tools/awscloud/eks-node-viewer.md
       - "AWS IAM Authenticator": tools/awscloud/aws-iam-authenticator.md
       - "AWS CDK": tools/awscloud/aws-cdk.md
       - "AWS SAM CLI": tools/awscloud/aws-sam-cli.md
